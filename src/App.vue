@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+
+    <h1>🧩 Swap The Images To Win</h1>
+
+    <PuzzleSelector
+      @puzzle-changed="changePuzzle"
+    />
+
+    <PuzzleGame
+      :puzzle-id="selectedPuzzle"
+    />
+
+    <GameRecords />
+
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { ref } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+import PuzzleSelector from './components/PuzzleSelector.vue'
+import PuzzleGame from './components/PuzzleGame.vue'
+import GameRecords from './components/GameRecords.vue'
+
+const selectedPuzzle = ref('cut-easy')
+
+function changePuzzle(id) {
+  selectedPuzzle.value = id
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.app {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 20px;
 }
 </style>
