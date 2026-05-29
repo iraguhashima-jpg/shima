@@ -53,15 +53,15 @@ const props = defineProps({
 
 // ✅ correct image order
 const correctPuzzleArray = [
-  'image_part_001.jpg',
-  'image_part_002.jpg',
-  'image_part_003.jpg',
-  'image_part_004.jpg',
-  'image_part_005.jpg',
-  'image_part_006.jpg',
-  'image_part_007.jpg',
-  'image_part_008.jpg',
-  'image_part_009.jpg'
+  'maker_part_001.jpg',
+  'maker_part_002.jpg',
+  'maker_part_003.jpg',
+  'maker_part_004.jpg',
+  'maker_part_005.jpg',
+  'maker_part_006.jpg',
+  'maker_part_007.jpg',
+  'maker_part_008.jpg',
+  'maker_part_009.jpg'
 ]
 
 // ✅ shuffled images
